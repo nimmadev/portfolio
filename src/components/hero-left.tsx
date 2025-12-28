@@ -20,7 +20,9 @@ export function Introduction() {
       </div>
 
       <div className="navigation-button flex gap-4 pt-4">
-        <Button>Contact Me</Button>
+        <Button asChild>
+          <a href="#contact">Contact Me</a>
+        </Button>
         <Button asChild variant={'secondary'}>
           <a href="#projects">Projects</a>
         </Button>

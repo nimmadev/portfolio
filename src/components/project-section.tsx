@@ -2,7 +2,7 @@ import { ProjectCard } from '@/components/ui/project-card';
 
 export function ProjectSection() {
   return (
-    <section className="p-4  sm:w-[60svw]">
+    <section className="p-4">
       <h2 id="projects" className="flex gap-2 text-5xl font-medium pb-4">
         <span className="text-muted-foreground">#</span> Projects
       </h2>

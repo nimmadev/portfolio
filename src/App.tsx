@@ -7,14 +7,16 @@ import ContactForm from '@/components/contact-form';
 function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <Header />
-      <HeroSection />
-      <div className="">
-        <ProjectSection />
-        <div className="border-l-2" />
-        <ContactForm />
+      <div className="container mx-auto">
+        <Header />
+        <HeroSection />
+        <div className="lg:flex">
+          <ProjectSection />
+          <div className="border-l-2 mx-3" />
+          <ContactForm />
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </ThemeProvider>
   );
 }

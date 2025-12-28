@@ -49,39 +49,40 @@ export default function ContactForm() {
   };
 
   return (
-    <Card className="max-w-md  m-4">
-      <CardHeader>
-        <CardTitle>Contact Me</CardTitle>
-      </CardHeader>
+    <div className="pt-4 md:grow max-w-lg min-w-75 ">
+      <h2 id="contact" className="flex gap-2 text-5xl font-medium pb-4">
+        <span className="text-muted-foreground">#</span> Contact Me
+      </h2>
+      <Card className=" m-4 mt-0">
+        <CardContent>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <Label htmlFor="name">Name</Label>
+              <Input id="name" name="name" required />
+            </div>
 
-      <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <Label htmlFor="name">Name</Label>
-            <Input id="name" name="name" required />
-          </div>
+            <div>
+              <Label htmlFor="email">Email</Label>
+              <Input id="email" name="email" type="email" required />
+            </div>
 
-          <div>
-            <Label htmlFor="email">Email</Label>
-            <Input id="email" name="email" type="email" required />
-          </div>
+            <div>
+              <Label htmlFor="message">Message</Label>
+              <Textarea id="message" name="message" rows={4} required />
+            </div>
 
-          <div>
-            <Label htmlFor="message">Message</Label>
-            <Textarea id="message" name="message" rows={4} required />
-          </div>
+            <Button type="submit" className="w-full">
+              Send Message
+            </Button>
 
-          <Button type="submit" className="w-full">
-            Send Message
-          </Button>
-
-          {status && (
-            <p className="text-sm text-center text-muted-foreground">
-              {status}
-            </p>
-          )}
-        </form>
-      </CardContent>
-    </Card>
+            {status && (
+              <p className="text-sm text-center text-muted-foreground">
+                {status}
+              </p>
+            )}
+          </form>
+        </CardContent>
+      </Card>
+    </div>
   );
 }
