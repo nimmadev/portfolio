@@ -49,11 +49,11 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="pt-4 md:grow max-w-lg min-w-75 ">
+    <div className="p-4 md:grow max-w-lg min-w-75 ">
       <h2 id="contact" className="flex gap-2 text-5xl font-medium pb-4">
         <span className="text-muted-foreground">#</span> Contact Me
       </h2>
-      <Card className=" m-4 mt-0">
+      <Card>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
